@@ -5,6 +5,7 @@ import 'package:pokedex/pages/home_page/widgets/app_bar_home.dart';
 import 'package:pokedex/stores/pokeapi_store.dart';
 
 class HomePage extends StatefulWidget {
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -20,8 +21,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
     double screenWidth = MediaQuery.of(context).size.width;
     double statusWidth = MediaQuery.of(context).padding.top;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -55,7 +58,10 @@ class _HomePageState extends State<HomePage> {
                             ? ListView.builder(
                               itemCount: pokeApiStore.pokeAPI.pokemon.length,
                                 itemBuilder: (context, index) {
-                                  return ListTile(title: Text(pokeApiStore.pokeAPI.pokemon[index].name),);
+                                  return ListTile(title: Text(
+                                      pokeApiStore.pokeAPI.pokemon[
+                                        index].name),
+                                  );
                                 },
                               )
                             : Center(
