@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class AppBarHome extends StatelessWidget {
   @override
@@ -6,27 +7,29 @@ class AppBarHome extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Container(
+         /* Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 13, right: 5),
                   child: IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: () {},
+                    icon: Icon(Icons.refresh),
+                    onPressed: () {
+
+                    },
                   ),
                 )
               ],
             ),
-          ),
+          ),*/
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 30, top: 50),
                 child: Text(
-                  'Pokedex',
+                  'Pokémon',
                   style: TextStyle(
                       fontFamily: 'Google',
                       fontWeight: FontWeight.bold,
@@ -38,7 +41,6 @@ class AppBarHome extends StatelessWidget {
         ],
       ),
       height: 120,
-      //color: (Color.fromARGB(200, 240, 245, 210)),
     );
   }
 }
